@@ -1,5 +1,5 @@
 # Personal Dots: "OldbandT"
-![preview](https://raw.githubusercontent.com/crustware/dotzzz/master/preview.gif?token=AQEXLV5GSL5O74F2KC6EJE3AHFNMO)
+![preview](preview.gif)
 ## NO SUPPORT
 ## Aesthetic Insperation: Colorschemes such as
 - [dracula-theme](https://github.com/dracula/dracula-theme)
