@@ -1,0 +1,130 @@
+
+* {
+    font: "Rec Mono Linear 8";
+    foreground: #d9dce3;
+    background-color: #1d1f20;
+    active-background: #4e5559;
+    urgent-background: #955e72;
+    selected-background: @active-background;
+    selected-urgent-background: @urgent-background;
+    selected-active-background: @active-background;
+    separatorcolor: @active-background;
+    bordercolor: @foreground;
+    show-icons: true;
+    drun-display-format: "{icon} {name}";
+    display-run: "ﰌ ";
+    display-drun: " ";
+    display-window: " ";
+    modi: "window,run,drun";
+    lines: 15;
+}
+
+#window {
+    background-color: @background;
+    padding:          5;
+    width:            480px;  
+}
+#mainbox {
+    border:  0;
+    padding: 0;
+}
+#message {
+    border:       1px dash 0px 0px ;
+    border-color: @separatorcolor;
+    padding:      1px ;
+}
+#textbox {
+    text-color: @foreground;
+}
+#listview {
+    columns: 3;
+    fixed-height: 0;
+    border:       2px dash 0px 0px ;
+    spacing:      2px ;
+    scrollbar:    false;
+    padding:      2px 0px 0px ;
+}
+#element {
+    border:  0;
+    padding: 1px ;
+}
+#element.normal.normal {
+    background-color: @background;
+    text-color:       @foreground;
+}
+#element.normal.urgent {
+    background-color: @urgent-background;
+    text-color:       @urgent-foreground;
+}
+#element.normal.active {
+    background-color: @active-background;
+    text-color:       @background;
+}
+#element.selected.normal {
+    background-color: @selected-background;
+    text-color:       @background;
+}
+#element.selected.urgent {
+    background-color: @selected-urgent-background;
+    text-color:       @background;
+}
+#element.selected.active {
+    background-color: @selected-active-background;
+    text-color:       @background;
+}
+#element.alternate.normal {
+    background-color: @background;
+    text-color:       @foreground;
+}
+#element.alternate.urgent {
+    background-color: @urgent-background;
+    text-color:       @background;
+}
+#element.alternate.active {
+    background-color: @active-background;
+    text-color:       @background;
+}
+element-icon {
+    size: 16px;
+    border: 0px;
+}
+#scrollbar {
+    width:        2px ;
+    border:       0;
+    handle-width: 8px ;
+    padding:      0;
+}
+#sidebar {
+    border:       2px dash 0px 0px ;
+    border-color: @separatorcolor;
+}
+#button.selected {
+    background-color: @selected-background;
+    text-color:       @background;
+}
+#inputbar {
+    spacing:    0;
+    text-color: @foreground;
+    padding:    1px ;
+}
+#case-indicator {
+    spacing:    0;
+    text-color: @foreground;
+}
+#entry {
+    spacing:    0;
+    text-color: @foreground;
+}
+#prompt {
+    spacing:    0;
+    text-color: @foreground;
+}
+#inputbar {
+    children:   [ prompt,textbox-prompt-colon,entry,case-indicator ];
+}
+#textbox-prompt-colon {
+    expand:     false;
+    str:        ":";
+    margin:     0px 0.3em 0em 0em ;
+    text-color: @foreground;
+}

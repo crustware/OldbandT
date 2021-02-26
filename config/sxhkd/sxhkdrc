@@ -1,0 +1,158 @@
+#######################
+# sxhkd configuration #
+# CrustWare @ github  #
+#######################
+
+### Window management ###
+
+# quit/restart bspwm 
+super + shift + r
+ 	bspc wm -r
+
+# make sxhkd reload its configuration files:
+super + Escape
+	pkill -USR1 -x sxhkd
+
+# close and kill
+super + {q,w}
+	bspc node -{c,k}
+
+# a three finger salute
+super + shift + q
+	kitty htop
+
+# set the window state
+super + {t,p,s,f}
+	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
+
+# focus or send to the given desktop
+super + {_,shift + }{1-6,0}
+	bspc {desktop -f,node -d} '^{1-6,10}'
+
+# Go to specific window
+super + Tab
+    rofi -show window -location 6 -yoffset -60 -line-padding 4 -columns 2 -width 5 -lines 10 -padding 25
+
+# send the window in the given direction
+super + {_,shift + }{Left,Down,Up,Right}
+	bspc node -{f,s} {west,south,north,east}
+
+# focus the next/previous desktop in the current monitor
+super + bracket{left,right}
+	bspc desktop -f {prev,next}.local
+
+# shrinking windows
+super + alt + {Left,Down,Up,Right}
+	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
+
+# expanding windows
+super + ctrl + {Left,Down,Up,Right}
+	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}    
+
+### Custom keybinds ###
+
+# screenshot
+Print
+    scrot
+
+### volume control and media playback ###
+
+XF86AudioRaiseVolume
+	amixer -D pulse sset Master 5%+
+
+XF86AudioLowerVolume
+	amixer -D pulse sset Master 5%-
+
+XF86AudioMute
+	amixer sset Master toggle
+
+super + alt + c
+    playerctl --all-players stop
+
+super + alt + v
+    playerctl --all-players play
+
+super + alt + n
+    playerctl --player=mpv previous
+
+super + alt + m
+    playerctl --player=mpv next
+
+
+### launchers ###
+
+# launch terminal emulator
+super + Return
+	kitty
+
+# run launcher
+super + x
+    rofi -show run -show window -location 6 -yoffset -60 -line-padding 4 -columns 2 -width 5 -lines 10 -padding 25
+
+# run launcher
+super + z
+    rofi -show drun -show window -location 6 -yoffset -60 -line-padding 4 -columns 2 -width 5 -lines 10 -padding 25 -show-icons
+
+# calculator
+super + r
+    jumpapp galculator
+
+# search engines
+super + shift + s
+    ~/.config/rofi/scripts/websearch.sh
+
+# internet bookmarks
+super + shift + a
+    ~/.config/rofi/scripts/bookmarks.sh
+
+# power, logout, reboot
+super + shift + p
+    ~/.config/rofi/scripts/powermenu-bspwm.sh
+
+# twitch streams
+super + shift + m
+    rofi-ttv followed
+
+# tui file management
+super + shift + d
+    kitty ranger
+
+# gui file management
+super + shift + f
+    nautilus
+
+# music player
+super + shift + b
+    flatpak run com.spotify.Client
+
+# jellyfin server
+super + shift + v
+    jumpapp jellyfin-mpv-desktop
+
+# Web Browser
+super + shift + i
+    librewolf
+
+super + shift + o
+    vscodium
+
+# Email Client
+super + shift + y
+    jumpapp thunderbird
+
+# passwords
+super + shift + u
+    jumpapp keepassxc
+
+
+
+
+
+
+
+
+
+
+
+
+

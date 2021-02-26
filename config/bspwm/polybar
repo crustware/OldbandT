@@ -1,0 +1,175 @@
+;;-_-_-_-_-_-_-_-_-_-_-
+;; polybar: CrustWare
+
+[colors]
+background = ${xrdb:background:#222}
+foreground = ${xrdb:foreground:#222}
+black = ${xrdb:color0:#222}
+black-light = ${xrdb:color8:#222}
+red = ${xrdb:color1:#222}
+red-light = ${xrdb:color9:#222}
+green = ${xrdb:color2:#222}
+green-light = ${xrdb:color10:#222}
+yellow = ${xrdb:color3:#222}
+yellow-light = ${xrdb:color11:#222}
+blue = ${xrdb:color4:#222}
+blue-light = ${xrdb:color12:#222}
+megenta = ${xrdb:color5:#222}
+megenta-light = ${xrdb:color13:#222}
+cyan = ${xrdb:color6:#222}
+cyan-light = ${xrdb:color14:#222}
+white = ${xrdb:color7:#222}
+white-light = ${xrdb:color15:#222}
+
+;;-_-_-_-_-_-_-
+;; bar config
+
+[bar/left]
+monitor = DisplayPort-0
+background = ${colors.black}
+foreground = ${colors.foreground}
+width = 100%
+height = 18
+;;offset-x = .5%
+;;offset-y = .2%
+padding = 1
+border-size = 1
+border-color = ${colors.black}
+fixed-center = true
+enable-ipc = true
+font-0=Rec Mono Linear:style=Regular:size=8;2
+font-1=Hurmit Nerd Font Mono:style=Regular:size=8;2
+modules-left = bspwm
+modules-right = network memory cpu pulseaudio date
+wm-restack = bspwm
+scroll-up = bspwm-desknext
+scroll-down = bspwm-deskprev
+
+[bar/right]
+monitor = HDMI-A-0
+background = ${colors.black}
+foreground = ${colors.foreground}
+width = 100%
+height = 16
+;;offset-x = .5%
+;;offset-y = .5%
+padding = 1
+border-size = 2
+border-color = ${colors.black}
+fixed-center = true
+enable-ipc = true
+font-0=Rec Mono Linear:style=Regular:size=9;2
+font-1=Hurmit Nerd Font:style=Regular:size=9;2
+modules-left = bspwm
+modules-center = xwindow
+modules-right = network memory cpu pulseaudio date
+wm-restack = bspwm
+scroll-up = bspwm-desknext
+scroll-down = bspwm-deskprev
+
+;;-_-_-_-_-
+; modules
+
+[module/bspwm]
+type = internal/bspwm
+format = <label-state>
+content-margin = 1
+content-padding = 1
+label-monitor = " %name% "
+label-focused = " %icon% " 
+label-focused-foreground = ${colors.green}
+label-occupied = " %icon% "
+label-occupied-foreground = ${colors.blue}
+label-urgent = " %icon% "
+label-urgent-foreground = ${colors.red}
+label-empty = " %icon% "
+label-empty-foreground = ${colors.foreground}
+pin-workspaces = true
+inline-mode = false
+enable-click = true
+enable-scroll = true
+reverse-scroll = false
+fuzzy-match = true
+ws-icon-0 = 1;
+ws-icon-1 = 2;
+ws-icon-2 = 3;
+ws-icon-3 = 4;
+ws-icon-4 = 5;
+ws-icon-5 = 6;
+
+[module/xwindow]
+type = internal/xwindow
+label ="%title:0:30:...%"
+label-empty = "Desktop"
+format-padding = 1
+format-background = ${colors.red}
+format-foreground = ${colors.background}
+
+[module/network]
+type = internal/network
+interface = enp7s0
+interval = 3.0
+accumulate-stats = true
+unknown-as-up = true
+format-connected = <label-connected>
+format-connected-prefix = 
+format-connected-prefix-padding = 1
+format-connected-prefix-foreground = ${colors.green}
+format-connected-foreground = ${colors.foreground}
+label-connected = %downspeed%
+label-disconnected = dead
+format-disconnected = <label-disconnected>
+format-disconnected-foreground = ${colors.red}
+content-padding = 1
+
+[module/memory]
+type = internal/memory
+interval = 0.3
+format = <label>
+format-prefix = 
+format-prefix-padding = 1
+format-foreground = ${colors.yellow}
+label-foreground = ${colors.foreground}
+label = %gb_used%
+
+[module/cpu]
+type = internal/cpu
+interval = 0.5
+format = <label>
+format-prefix-padding = 1
+format-prefix = 
+format-foreground = ${colors.blue}
+label-foreground = ${colors.foreground}
+label = "%percentage%%"
+content-margin = 1
+
+[module/pulseaudio]
+type = internal/pulseaudio
+format-volume-prefix = 蓼
+format-volume-prefix-padding = 1
+format-volume = <label-volume>
+format-volume-foreground = ${colors.megenta}
+label-volume-foreground = ${colors.foreground}
+label-volume = %percentage%%
+format-muted-prefix = 遼
+format-muted-prefix-padding = 1
+format-muted = <label-muted>
+format-muted-foreground = ${colors.red}
+label-muted-foreground = ${colors.foreground}
+content-margin = 1
+
+[module/date]
+type = internal/date
+time = %r
+time-alt = %a %b %d %y
+format = <label>
+format-prefix = 
+format-prefix-padding = 1
+format-foreground = ${colors.cyan}
+label-foreground = ${colors.foreground}
+label = %time%
+content-margin = 1
+
+[global/wm]
+margin-top = 0
+margin-bottom = 0
