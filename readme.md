@@ -9,11 +9,9 @@
 the web extension [darkreader](https://darkreader.org/)
 and the faded Band T-shirt you bought at the Mall when
 you were younger for entirely too much money.
-Personally i love all these i just wanted something that the background color didnt clash with standard "dark mode"
-settings in applications. i personally dont want to theme
-the entire internet and i personally like black/grey 🖤
 
 ### about, usecase, configs included
+
 i dont code very much personally mostly just fell in love with tiling window managers cuz i love to have all my windows visible or not opened at all.
 this setup is used mostly for 
 1. Browsing
