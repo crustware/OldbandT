@@ -1,6 +1,6 @@
 # Personal Dots: "OldbandT"
 ![preview](https://raw.githubusercontent.com/crustware/dotzzz/master/preview.gif?token=AQEXLV5GSL5O74F2KC6EJE3AHFNMO)
-# NO SUPPORT
+## NO SUPPORT
 ## Aesthetic Insperation: Colorschemes such as
 - [dracula-theme](https://github.com/dracula/dracula-theme)
 - [nord](https://github.com/arcticicestudio/nord)
@@ -9,7 +9,7 @@
 the web extension [darkreader](https://darkreader.org/)
 and the faded Band T-shirt you bought at the Mall when
 you were younger for entirely too much money.
-
+---
 Personally i love all these i just wanted something that the background color didnt clash with standard "dark mode"
 settings in applications. i personally dont want to theme
 the entire internet and i personally like black/grey 🖤
