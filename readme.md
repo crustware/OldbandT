@@ -21,7 +21,7 @@ this setup is used mostly for
 5. Watching movies, shows, TV, Twitch
 ---
 base config is.
-Bspwn, Rofi, Polybar, Dunst, picom
+Bspwm, Rofi, Polybar, Dunst, picom
 
 Configs included for:
 - [bspwm](https://github.com/baskerville/bspwm)
