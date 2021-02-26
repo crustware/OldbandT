@@ -89,7 +89,7 @@ super + Return
 super + x
     rofi -show run -show window -location 6 -yoffset -60 -line-padding 4 -columns 2 -width 5 -lines 10 -padding 25
 
-# run launcher
+# drun launcher
 super + z
     rofi -show drun -show window -location 6 -yoffset -60 -line-padding 4 -columns 2 -width 5 -lines 10 -padding 25 -show-icons
 
