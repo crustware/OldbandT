@@ -1,5 +1,5 @@
 ;;-_-_-_-_-_-_-_-_-_-_-
-;; polybar: CrustWare
+;; polybar: https://github.com/crustware/OldbandT
 
 [colors]
 background = ${xrdb:background:#222}
