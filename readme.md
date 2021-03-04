@@ -63,9 +63,10 @@ super + shift + v
 
 ```
 video playback is assigned to workspace 6
-my setup is dual monitor tweak to your setup
-im more than sure that there is extra steps needed to get these dots working like in
-the screenshots but i am merely posting these files here as examples to grab
+my setup is dual monitor tweak to your setup.
+
+I am more than sure that there is extra steps needed to get these dots working
+like in the screenshots but i am merely posting these files here as examples to grab
 bits and pieces from.
 
 
