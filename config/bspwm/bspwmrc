@@ -1,6 +1,6 @@
 #! /bin/sh
 ###########################
-## Discord:CrustWare#3292
+## https://github.com/crustware/OldbandT
 
 ### Environment ###
 export PATH="${PATH}:$HOME/.config/bspwm"
