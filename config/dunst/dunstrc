@@ -1,3 +1,6 @@
+##########################################
+## dunst: https://github.com/crustware/OldbandT
+
 [global]
 
 monitor = 0
