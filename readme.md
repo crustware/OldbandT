@@ -62,7 +62,10 @@ super + shift + v
     jumpapp jellyfin-mpv-desktop
 
 ```
-video playback is assigned to workspace 6
+video playback thru mpv is assigned to workspace 6.
+jellyfin-mpv-shim is started automatically on login.
+local casting bliss 😊
+
 my setup is dual monitor tweak to your setup.
 
 I am more than sure that there is extra steps needed to get these dots working
